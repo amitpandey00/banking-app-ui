@@ -1,4 +1,4 @@
-package com.example.bankingapp
+package com.example.bankingapp.ui.home.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -24,7 +24,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.bankingapp.data.Finance
+import com.example.bankingapp.data.model.Finance
 import com.example.bankingapp.ui.theme.BlueStart
 import com.example.bankingapp.ui.theme.GreenStart
 import com.example.bankingapp.ui.theme.OrangeStart

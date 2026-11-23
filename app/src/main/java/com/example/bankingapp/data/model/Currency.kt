@@ -1,4 +1,4 @@
-package com.example.bankingapp.data
+package com.example.bankingapp.data.model
 
 import androidx.compose.ui.graphics.vector.ImageVector
 

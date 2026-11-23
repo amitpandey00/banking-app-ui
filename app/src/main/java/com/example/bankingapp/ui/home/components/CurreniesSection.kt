@@ -1,4 +1,4 @@
-package com.example.bankingapp
+package com.example.bankingapp.ui.home.components
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
@@ -41,7 +41,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.bankingapp.data.Currency
+import com.example.bankingapp.data.model.Currency
 import com.example.bankingapp.ui.theme.GreenStart
 
 val currencies = listOf(

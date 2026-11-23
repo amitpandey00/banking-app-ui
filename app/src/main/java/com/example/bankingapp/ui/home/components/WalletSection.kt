@@ -1,4 +1,4 @@
-package com.example.bankingapp
+package com.example.bankingapp.ui.home.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

@@ -1,10 +1,5 @@
-package com.example.bankingapp
+package com.example.bankingapp.navigation
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.AccountCircle
-import androidx.compose.material.icons.rounded.Home
-import androidx.compose.material.icons.rounded.Notifications
-import androidx.compose.material.icons.rounded.Wallet
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -15,25 +10,18 @@ import androidx.compose.runtime.getValue
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.example.bankingapp.data.BottomNavigation
 
-val items = listOf(
-    BottomNavigation("Home", Icons.Rounded.Home, "home"),
-    BottomNavigation("Wallet", Icons.Rounded.Wallet, "wallet"),
-    BottomNavigation("Notifications", Icons.Rounded.Notifications, "notifications"),
-    BottomNavigation("Account", Icons.Rounded.AccountCircle, "account")
-)
 @Composable
 fun BottomNavigationBar(navController: NavController) {
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = backStackEntry?.destination?.route
 
     NavigationBar(containerColor = MaterialTheme.colorScheme.inverseOnSurface) {
-        items.forEach { item ->
+        bottomNavItems.forEach { screen ->
             NavigationBarItem(
-                selected = currentRoute == item.route,
+                selected = currentRoute == screen.route,
                 onClick = {
-                    navController.navigate(item.route) {
+                    navController.navigate(screen.route) {
                         popUpTo(navController.graph.findStartDestination().id) {
                             saveState = true
                         }
@@ -41,9 +29,19 @@ fun BottomNavigationBar(navController: NavController) {
                         restoreState = true
                     }
                 },
-                icon = { Icon(item.icon, contentDescription = item.title,
-                    tint = MaterialTheme.colorScheme.onBackground) },
-                label = { Text(item.title, color = MaterialTheme.colorScheme.onBackground) }
+                icon = {
+                    Icon(
+                        imageVector = screen.icon,
+                        contentDescription = screen.title,
+                        tint = MaterialTheme.colorScheme.onBackground
+                    )
+                },
+                label = {
+                    Text(
+                        text = screen.title,
+                        color = MaterialTheme.colorScheme.onBackground
+                    )
+                }
             )
         }
     }

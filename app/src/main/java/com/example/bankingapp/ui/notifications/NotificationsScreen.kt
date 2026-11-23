@@ -1,4 +1,4 @@
-package com.example.bankingapp
+package com.example.bankingapp.ui.notifications
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,8 +9,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun AccountScreen() {
-    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text("Account Screen", color = MaterialTheme.colorScheme.onBackground)
+fun NotificationsScreen() {
+    Box(
+        Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    )
+    {
+        Text("Notifications Screen", color = MaterialTheme.colorScheme.onBackground)
     }
 }

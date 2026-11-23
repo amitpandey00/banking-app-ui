@@ -1,4 +1,4 @@
-package com.example.bankingapp
+package com.example.bankingapp.ui.home.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -18,13 +18,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.modifier.modifierLocalOf
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.bankingapp.data.Card
+import com.example.bankingapp.R
+import com.example.bankingapp.data.model.Card
 import com.example.bankingapp.ui.theme.BlueEnd
 import com.example.bankingapp.ui.theme.BlueStart
 import com.example.bankingapp.ui.theme.GreenEnd
